@@ -26,6 +26,10 @@ const AddTodo = () => {
         e.target.reset();
         window.location.href = '/';
     }
+    
+    const onLoading = () => {
+        return 'loading...';
+    }
 
     return (
         <form onSubmit={handleSubmit<AddToForm>(onSubmit)}>
