@@ -13,6 +13,7 @@ const TodoList = () => {
                 <tr>
                     <th>#</th>
                     <th>Tarefa</th>
+                    <th>Categoria</th>
                     <th></th>
                 </tr>
             </thead>
