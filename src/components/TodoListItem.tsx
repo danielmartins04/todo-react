@@ -18,6 +18,19 @@ const TodoListItem = (props: TodoListItemProps) => {
         toggle(props.todo);
     }
 
+    const handleCategory = (category: string) => {
+        switch (category) {
+            case '0':
+                return 'Sem Categoria';
+            case '1':
+                return 'Importante';
+            case '2':
+                return 'Urgente';
+            default:
+                return 'Sem Categoria';
+        }
+    }
+
     return (
         <tr className="uk-animation-slide-bottom-medium">
             <td className="uk-width-auto"> 
@@ -26,8 +39,8 @@ const TodoListItem = (props: TodoListItemProps) => {
                 </label>
             </td>
 
-            <td className="uk-width-expand">{props.todo.title}</td>
-            <td className="uk-width-expand">Sem Categoria</td>
+            <td className="uk-width-1-2">{props.todo.title}</td>
+            <td className="uk-width-1-2">{handleCategory(props.todo.category)}</td>
             <td className="uk-width-auto">
                 <button className="uk-icon-button uk-button-danger" uk-icon="trash" onClick={() => onRemove(props.todo)} ></button>
             </td>
