@@ -17,13 +17,8 @@ const TodoProvider = (props: any) => {
         save(todos);
     }, [todos]);
 
-    const addTodo = (title: string, category: string) => {
-        const todo: Todo = { 
-            id: todos.length + 1, 
-            title: title, 
-            category: category,
-            done: false 
-        };
+    const addTodo = (title: string) => {
+        const todo: Todo = { id: todos.length + 1, title: title, done: false };
         setTodos([...todos, todo]);
     }
 
